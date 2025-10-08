@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db-quiz-service
+    environment:
+      POSTGRES_DB: QuizDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Aranya
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgresSQL:/var/lib/postgresql/data
